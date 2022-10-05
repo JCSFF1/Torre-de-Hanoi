@@ -15,6 +15,16 @@ function reiniciaGame(){
     document.location.reload();
 }
 
+let intervalo = setInterval( callback, 1000 );
+
+function callback() {
+    tempo -= 1;
+    container_tempo.innerHTML = tempo;
+    if (tempo === 0) {
+        document.getElementById('modalLose').style.display="block"
+        clearInterval( intervalo );
+    }
+}
 
 function exibeJogo(){
     document.getElementById('iniciar').style.display="block";
@@ -22,17 +32,6 @@ function exibeJogo(){
     document.getElementById('towerTwo').style.display="flex";
     document.getElementById('towerthree').style.display="flex";
     document.getElementById('nivel').style.display="none";
-    
-    let intervalo = setInterval( callback, 1000 );
-    
-    function callback() {
-        tempo -= 1;
-        container_tempo.innerHTML = tempo;
-        if (tempo === 0) {
-            document.getElementById('modalLose').style.display="block"
-            clearInterval( intervalo );
-        } 
-    }
 }
 
 function towerCreate(){
@@ -243,8 +242,10 @@ function win(){
     let towerWin3 = document.getElementById("towerthree");
     if(towerWin1.lastElementChild === null && towerWin2.lastElementChild === null){
         document.getElementById('modalWin').style.display="block"
+        clearInterval( intervalo );
     }
     if(towerWin1.lastElementChild === null && towerWin3.lastElementChild === null){
         document.getElementById('modalWin').style.display="block"
+        clearInterval( intervalo );
     }
 }

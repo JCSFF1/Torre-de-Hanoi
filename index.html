@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Torre de Hanói</title>
+</head>
+<body>
+    <div id="nivel">
+    <div id="dificuldade">
+        <span>Escolha uma Dificuldade</span>
+            <button id="easy">Easy</button>
+            <button id="normal">Normal</button>
+            <button id="hard">Hard</button>    
+    </div>
+</div>
+    <div id="iniciar">
+            <header class="cabecalho">
+        <div class="container">
+            <div id="container-tempo" class="tempo">90</div>
+            <div id="container-peca" class="peca"></div>  
+            <div id="abrirMenu" class="configs">
+                <img src="img/opcoes.png" alt="configurações">
+            </div>
+        </div>
+    </header>
+    <main class="principal">
+        <div id="menu" class="mainMenu">
+            <p id="restart">Restart</p>
+            <p id="resume">Resume</p>
+            <p id="quit">Quit</p>
+        </div>
+    </main>
+    </div>
+    <div id="modalLose">
+        <div id="conteudoLose">
+            <p id="lose">You Lose!!!</p>
+            <button id="derrota" onclick="reiniciaGame()">Tente Novamente</button>
+        </div>
+    </div>
+    <div id="modalWin">
+        <div id="conteudoWin">
+            <p id="win">You Win!!!</p>
+            <button id="vitoria" onclick="reiniciaGame()">Jogue Novamente</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,271 @@
+body{
+    background-color: #2c3e50;
+}
+#iniciar {
+    display: none;
+}
+
+#towerOne, #towerTwo, #towerthree {
+    display: none;
+}
+
+#nivel{
+    display: block;
+}
+#dificuldade{
+    display: flex;
+    width: 100%;
+    height: 25rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+span{
+    font-size: 30px;
+    color: white;
+    margin: 60px 0 40px 0;
+}
+
+button {
+    box-sizing: border-box;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    background-color: transparent;
+    border: 2px solid #e74c3c;
+    border-radius: 0.6em;
+    color: #e74c3c;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+button:hover, button:focus {
+    color: #fff;
+    outline: 0;
+}
+
+#easy, #normal, #hard {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+#easy:hover, #normal:hover, #hard:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}  
+    
+.pin{
+    display: flex; 
+    flex-direction: column-reverse; 
+    align-items: center;
+    border-bottom: solid 2px white;
+    margin: 0 auto;
+    width: 250px;
+    height: 175px;
+}
+
+.disk{
+    background-image: linear-gradient(180deg, rgba(52,152,219,1) 2%, rgba(41,116,166,1) 55%);
+    border: solid 0.5px black;
+    border-radius: 25%;
+}
+
+#disk1{
+    display: table;
+    margin: 0 auto;
+    width: 120px;
+    height: 25px;
+}
+#disk2{
+    display: table;
+    margin: 0 auto;
+    width: 100px;
+    height: 25px;
+}
+#disk3{
+    display: table;
+    margin: 0 auto;
+    width: 80px;
+    height: 25px;
+}
+#disk4{
+    display: table;
+    margin: 0 auto;
+    width: 60px;
+    height: 25px;
+}
+
+#disk5{
+    display: table;
+    margin: 0 auto;
+    width: 40px;
+    height: 25px;
+}
+
+#disk6{
+    display: table;
+    margin: 0 auto;
+    width: 20px;
+    height: 25px;
+}
+
+.cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+    background-color: #fff;
+    border: solid 1px #183989;
+}
+
+.cabecalho .container .tempo {
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #6ca6e5;
+    border: solid 1px black;
+    border-radius: 10px;
+}
+
+.cabecalho .container .peca {
+    padding: 5px 10px;
+    width: 128px;
+    height: 36px;
+    background-color: #6ca6e5;
+    margin: 0 auto;
+    border: solid 1px black;
+}
+
+.cabecalho .container .configs img {
+    width: 40px;
+    height: 40px;
+}
+
+.cabecalho .container .configs img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.principal #menu {
+    position: absolute;
+    top: 30vh;
+    left: 20vw;
+    width: 60vw;
+    height: 284.8px;
+    border: solid 2px #6ca6e5;
+    border-radius: 10px;
+    background-color: white;
+    display: none;
+}
+
+.principal #menu.visivel {
+    display: block;
+}
+
+.principal #menu p {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    font-weight: bold;
+    background-color: #6ca6e5;
+    margin: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.principal #menu p:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+    color: #6ca6e5;
+    background-color: #2c3e50;
+}
+
+#modalLose, #modalWin{
+    display: none;
+    position: fixed;
+    z-index: 0;
+    left: 60px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+#conteudoLose, #conteudoWin{
+    background-color: #ffffff;
+    margin: 15%;
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#derrota, #vitoria{
+    border-color: #e74c3c;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #e74c3c inset, 0 0 0 0 #e74c3c;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+#derrota:hover, #vitoria:hover {
+    box-shadow: 0 0 10px 0 #e74c3c inset, 0 0 10px 4px #e74c3c;
+    color: #e74c3c;
+} 
+
+#lose, #win{
+    color: black;
+    font-size: 60px;
+    font-weight: bold;
+    margin: 20px 0 20px 0;
+}
+
+
+
+@media screen and (min-width: 735px) {
+    .cabecalho .container {
+        display: flex;
+        position: absolute;
+        height: 100vh;
+        flex-direction: column;
+    }
+    
+    .cabecalho .container .tempo {
+        margin-top: 30px;
+    }
+    
+    .cabecalho .container .configs img {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (min-width: 1154px) {
+    #base {
+        display: flex;
+        margin: 0 245px;
+        padding: 30vh 0;
+    }
+}
